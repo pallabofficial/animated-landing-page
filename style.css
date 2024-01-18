@@ -46,9 +46,9 @@ html,body{
 }
 /* --------------------------------------------------------below animated screen---------------------------------- */
 #center{
-    display: none;
+    /* display: none; */
     background-color: #e1dfdd;
-    position: absolute;
+    /* position: absolute; */
     width:100vw;
     height: 100vh;
 }
