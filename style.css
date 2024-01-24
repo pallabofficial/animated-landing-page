@@ -63,3 +63,10 @@ html,body{
 #nav h3{
     font-family: "Roboto", sans-serif;
 }
+
+/* -------------------------------------------------just check-------------------------------------------------- */
+.check{
+    width:100vw;
+    height:100vh;
+    border: 1px solid black;
+}

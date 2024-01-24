@@ -1,9 +1,14 @@
+const scroll = new LocomotiveScroll({
+    el: document.querySelector('#main'),
+    smooth: true
+});
+
+
 let sequence = gsap.timeline();
 
 sequence
     .from("#min-count", {
-        // delay:0.5,
-        // duration: 1,
+      
         
         onStart: function () {
             $('#min-count').textillate({
@@ -20,7 +25,7 @@ sequence
 
     .from("#mid-count", {
         delay:0.5,
-        // duration: 1,
+        
         opacity: 0,
         onStart: function () {
             $('#mid-count').textillate({
@@ -37,15 +42,13 @@ sequence
 
     .from("#max-count", {
         delay:0.5,
-        // duration: 2,
+        
         opacity: 0,
         onStart: function () {
             $('#max-count').textillate({
                 in: {
                     effect: 'fadeInUp',
-                    callback: function () {
-                        $('#max-count').textillate('out');
-                    }
+                   
                 },
                 out: { effect: 'fadeOutUp' },
             });
