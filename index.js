@@ -1,65 +1,52 @@
-const scroll = new LocomotiveScroll({
-    el: document.querySelector('#main'),
-    smooth: true
-});
+let tl = gsap.timeline();
+tl
 
-
-let sequence = gsap.timeline();
-
-sequence
     .from("#min-count", {
-      
-        
-        onStart: function () {
+        duration:1,
+        opacity:0,
+        onStart:function(){
             $('#min-count').textillate({
                 in: {
-                    effect: 'fadeInUp',
-                     callback: function () {
-                         $('#min-count').textillate('out');
-                     }
+                     effect: 'fadeInUp' ,
+                    callback:function(){
+                        $('#min-count').textillate('out');
+                    }
                 },
-                out: { effect: 'fadeOutUp' },
+                out: {effect:'fadeOutUp'}
             });
         }
     })
-
     .from("#mid-count", {
-        delay:0.5,
         
-        opacity: 0,
-        onStart: function () {
+        duration:1,
+        opacity:0,
+        onStart:function(){
             $('#mid-count').textillate({
                 in: {
-                    effect: 'fadeInUp',
-                    callback: function () {
+                     effect: 'fadeInUp' ,
+                    callback:function(){
                         $('#mid-count').textillate('out');
                     }
                 },
-                out: { effect: 'fadeOutUp' },
+                out: {effect:'fadeOutUp'}
             });
         }
     })
-
     .from("#max-count", {
-        delay:0.5,
-        
-        opacity: 0,
-        onStart: function () {
+        duration:1,
+        opacity:0,
+        onStart:function(){
             $('#max-count').textillate({
                 in: {
-                    effect: 'fadeInUp',
-                   
-                },
-                out: { effect: 'fadeOutUp' },
+                     effect: 'fadeInUp' 
+                  
+                }
+                
             });
         }
     })
-    .to("#top-screen", {
-        top: "-100%",
-        delay:0.5,
-        duration:2,
-        ease:"Power4.easeOut",
-
+    .to("#top-screen",{
+        y:"-100%",
+        duration:1,
+        ease:Power1.easeInOut,
     })
-
-
